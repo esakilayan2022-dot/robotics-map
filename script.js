@@ -12,6 +12,13 @@ addBtn.onclick = () => {
   eventForm.classList.remove("hidden");
 };
 
+//remove this afterwards
+const addBtn = document.getElementById("addBtn");
+
+addBtn.onclick = () => {
+  alert("Button clicked!");
+};
+
 //opposite to what happens earlier when close is clicked the hidden trait is added
 closeBtn.onclick = () => {
   eventForm.classList.add("hidden");
