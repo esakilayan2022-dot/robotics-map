@@ -1,9 +1,5 @@
-
-
-//Map is created, coordinates are where the map is centered
 const map = L.map('map').setView([52.1326, 5.2913], 7);
 
-//Makes the map more visible
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
   .addTo(map);
 
@@ -25,13 +21,13 @@ closeBtn.onclick = () => {
 function getEvents() {
   return JSON.parse(localStorage.getItem("events") || "[]");
 }
+
 function saveEvents(events) {
   localStorage.setItem("events", JSON.stringify(events));
 }
 
-//references the publish button
 const publishBtn = document.getElementById("publishBtn");
-//reads the form values
+
 publishBtn.onclick = async () => {
   const team = document.getElementById("team").value;
   const address = document.getElementById("address").value;
@@ -39,12 +35,11 @@ publishBtn.onclick = async () => {
   const endTime = document.getElementById("endTime").value;
   const description = document.getElementById("description").value;
 
-  // (I also don't really understand how this works) But basically it converts an adress into longitude and latitude
+  // Convert address → coordinates
   const res = await fetch(
     `https://nominatim.openstreetmap.org/search?format=json&q=${address}`
   );
   const data = await res.json();
-  //in case a location is not found
   if (!data.length) {
     alert("Location not found");
     return;
@@ -97,3 +92,8 @@ function renderEvents() {
 renderEvents();
 setInterval(renderEvents, 60000);
 
+const addBtn = document.getElementById("addBtn");
+//delete this after
+addBtn.onclick = () => {
+  alert("Button clicked!");
+};
