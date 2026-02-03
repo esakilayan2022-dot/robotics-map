@@ -1,5 +1,4 @@
-//I had to search up where to add this so this makes it so this waits for the html to load
-document.addEventListener("DOMContentLoaded", () => { ... });
+
 
 //Map is created, coordinates are where the map is centered
 const map = L.map('map').setView([52.1326, 5.2913], 7);
