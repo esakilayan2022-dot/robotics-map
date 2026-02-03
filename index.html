@@ -13,5 +13,42 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
+
+  <div id="eventForm" class="hidden">
+    <h4>Adding a Robotics Event...</h4>
+    <!-- This is for robotics teams to select their teams  -->
+     <!-- Later research how to get all robotics team, replace the placeholders  -->
+    <label>Robotics Team</label>
+    <select name="teams" id="teams">
+      <option value="trojanRobotics">Trojan Robotics</option>
+      <option value="flyingDutchman">The Flying Dutchman</option>
+      <option value="strooptech">Strooptech</option>
+    </select>
+
+     <!-- This is for inputting event location  -->
+    <label>Event Location</label>
+    <input id="address" placeholder="City or address" />
+
+     <!-- This is for choosing the start time  -->
+
+    <input id="startTime" type="datetime-local" />
+
+    <!-- This is for choosing the end time  -->
+
+    <input id="endTime" type="datetime-local" />
+
+    <!-- This is if the user wants to write a description but its optional  -->
+
+    <label>Description (Optional)</label>
+    <textarea id="description" name="description" rows="4" cols="50">N/A</textarea>
+
+    <!-- Button to publish the thingy -->
+    
+    <button id="publishBtn">Publish</button>
+
+    <!-- Button to close the tab -->
+    <button id="closeBtn">Cancel</button>
+
+  
 </body>
 </html>
