@@ -24,3 +24,12 @@ body, html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+#addBtn,
+#addBtn:hover,
+#addBtn:active,
+#addBtn:focus {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+
